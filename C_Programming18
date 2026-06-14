@@ -1,0 +1,19 @@
+#include <stdio.h>
+void check_prime(int n)
+{
+    int ones, tens;
+    ones = n % 10;
+    tens = (n / 10) % 10;
+    if((ones==2 || ones==3 || ones==5 || ones==7) &&
+       (tens==2 || tens==3 || tens==5 || tens==7))
+        printf("Prime");
+    else
+        printf("Not Prime");
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    check_prime(n);
+    return 0;
+}
