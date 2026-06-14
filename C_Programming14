@@ -1,0 +1,22 @@
+#include <stdio.h>
+void disp_interchange_first_last_digit(int n)
+{
+    int first, last, temp, rev = 0;
+    last = n % 10;
+    temp = n;
+    while(temp >= 10)
+    {
+        temp = temp / 10;
+    }
+    first = temp;
+    printf("First digit = %d\n", first);
+    printf("Last digit = %d\n", last);
+}
+int main()
+{
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    disp_interchange_first_last_digit(num);
+    return 0;
+}
