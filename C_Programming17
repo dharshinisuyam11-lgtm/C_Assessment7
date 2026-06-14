@@ -1,0 +1,27 @@
+#include <stdio.h>
+void check_prime_sum14(int n)
+{
+    int i, c = 0, s = 0, t;
+    for(i = 1; i <= n; i++)
+    {
+        if(n % i == 0)
+            c++;
+    }
+    t = n;
+    while(t > 0)
+    {
+        s = s + t % 10;
+        t = t / 10;
+    }
+    if(c == 2 && s == 14)
+        printf("Prime and Sum = 14");
+    else
+        printf("Not Satisfied");
+}
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    check_prime_sum14(n);
+    return 0;
+}
